@@ -17,10 +17,11 @@ A program that calculates the change that the customer should receive.
 ## Things to do:
 
 - [ ] Add "alt" to the images
-- [ ] Add pictures
+- [x] Add pictures
 - [x] The ability to enter only numbers from the keyboard
 - [x] Add sounds
 - [x] After "total" you can not press the "count" button - bug
-- [ ] Clean code
+- [x] Clean code
 - [x] Freepik
 - [x] Update description
+- [x] Fix footer
