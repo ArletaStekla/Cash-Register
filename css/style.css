@@ -1,0 +1,201 @@
+html {
+    background: white;
+    height: 100%;
+    font-family: cursive, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+h1 {
+    width: 150px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input[type=button] {
+    height: 40px;
+    width: 47px;
+    padding: 5px 0px;
+    margin-top: 3px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    box-shadow: 0 9px #CACAC2;
+}
+
+input[type=button]:hover {
+    background-color: #3e8e41
+}
+
+input[type=button]:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+input::placeholder {
+    color: white;
+}
+
+input[type=text] {
+    height: 20px;
+    width: 180px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #6C7F51;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 0px;
+    border: none;
+    text-align: right;
+    margin: 205px 0px 0px 220px;
+    color: white;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: #6C7F51;
+    text-align: center;
+    color: white;
+}
+
+.cashButtons {
+    width: 160px;
+    height: 220px;
+    margin: 82px 0px 0px 227px;
+}
+
+#amount {
+    position: absolute;
+    margin-top: 376px;
+    margin-left: 401px;
+    height: 40px;
+    width: 47px;
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #3c3a3f;
+    background-color: #4CAF50;
+    border: none;
+    box-shadow: 0 9px #CACAC2;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+#total {
+    position: absolute;
+    margin-top: 313px;
+    margin-left: 401px;
+    height: 40px;
+    width: 47px;
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #3c3a3f;
+    background-color: #3e8e41;
+    border: none;
+    box-shadow: 0 9px #CACAC2;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+#coun {
+    position: absolute;
+    margin-top: 209px;
+    margin-left: 396px;
+    height: 40px;
+    width: 47px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #3c3a3f;
+    background-color: #4CAF50;
+    border: none;
+    box-shadow: 0 9px #CACAC2;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+#total:hover, #amount:hover, #coun:hover {
+    background-color: #3e8e41
+}
+
+#total:active, #amount:active, #coun:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#change {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 240px;
+    height: 25px;
+    width: 140px;
+    background-color: #6C7F51;
+}
+
+#cashRegister {
+    height: 670px;
+    width: 800px;
+    background-image: url('../image/background.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 500px 700px;
+    margin: 10px 0px 40px 250px;
+    padding: 20px;
+    position: relative;
+}
+
+#screen {
+    width: 300px;
+    height: 300px;
+    margin-left: 5px;
+}
+
+#banknotes {
+    height: 530px;
+    width: 100px;
+    top: 80px;
+    left: 820px;
+    position: absolute;
+}
+
+#banknote {
+    position: absolute;
+    left: 130px;
+    top: 5px;
+    color: black;
+    padding-left: 20px;
+}
+
+#coins {
+    height: 530px;
+    width: 100px;
+    top: 80px;
+    left: 1100px;
+    position: absolute;
+}
+
+#coin {
+    position: absolute;
+    left: 60px;
+    top: 5px;
+    color: black;
+    padding-left: 20px
+}
+
