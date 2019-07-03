@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Cash register</title>
     <meta charset="UTF-8">
@@ -9,169 +10,169 @@
 </head>
 
 <body>
+    <div class="demo">
+        <div id="cashRegister">
+            <button id="total" onclick="total();">Total due</button>
+            <button id="amount" onclick="amount();">Amount paid</button>
+            <input type="text" id="change" placeholder="Change:" readonly>
+            <div id="screen">
+                <form id="totalScreen">
 
-    <div id="cashRegister">
-        <button id="total" onclick="total();">Total due</button>
-        <button id="amount" onclick="amount();">Amount paid</button>
-        <input type="text" id="change" placeholder="Change:" readonly>
-        <div id="screen">
-            <form id="totalScreen">
-
-                <input type="text" onkeypress="return ((event.keyCode==8 ||event.keyCode==49 || event.keyCode==50 || event.keyCode==51|| event.keyCode==52|| event.keyCode==53|| event.keyCode==54|| event.keyCode==55|| event.keyCode==56|| event.keyCode==57|| event.keyCode==48|| event.keyCode === 46) && event.keyCode !== 16)" id="enterTotal" name="answer" value="" placeholder="Enter the total due:">
-                <input type="button" id="coun" onclick="count();" value="Count">
-                <br>
-
-                <div class="cashButtons">
-                    <input type="button" value=" 1 " onclick="totalScreen.answer.value += '1'; change();" />
-                    <input type="button" value=" 2 " onclick="totalScreen.answer.value += '2'; change();" />
-                    <input type="button" value=" 3 " onclick="totalScreen.answer.value += '3'; change();" />
+                    <input type="text" onkeypress="return ((event.keyCode==8 ||event.keyCode==49 || event.keyCode==50 || event.keyCode==51|| event.keyCode==52|| event.keyCode==53|| event.keyCode==54|| event.keyCode==55|| event.keyCode==56|| event.keyCode==57|| event.keyCode==48|| event.keyCode === 46) && event.keyCode !== 16)" id="enterTotal" name="answer" value="" placeholder="Enter the total due:">
+                    <input type="button" id="coun" onclick="count();" value="Count">
                     <br>
 
-                    <input type="button" value=" 4 " onclick="totalScreen.answer.value += '4'; change();" />
-                    <input type="button" value=" 5 " onclick="totalScreen.answer.value += '5'; change();" />
-                    <input type="button" value=" 6 " onclick="totalScreen.answer.value += '6'; change();" />
-                    <br>
+                    <div class="cashButtons">
+                        <input type="button" value=" 1 " onclick="totalScreen.answer.value += '1'; change();" />
+                        <input type="button" value=" 2 " onclick="totalScreen.answer.value += '2'; change();" />
+                        <input type="button" value=" 3 " onclick="totalScreen.answer.value += '3'; change();" />
+                        <br>
 
-                    <input type="button" value=" 7 " onclick="totalScreen.answer.value += '7'; change();" />
-                    <input type="button" value=" 8 " onclick="totalScreen.answer.value += '8'; change();" />
-                    <input type="button" value=" 9 " onclick="totalScreen.answer.value += '9'; change();" />
-                    <br>
+                        <input type="button" value=" 4 " onclick="totalScreen.answer.value += '4'; change();" />
+                        <input type="button" value=" 5 " onclick="totalScreen.answer.value += '5'; change();" />
+                        <input type="button" value=" 6 " onclick="totalScreen.answer.value += '6'; change();" />
+                        <br>
 
-                    <input type="button" value=" 0 " onclick="totalScreen.answer.value += '0'; change();" />
-                    <input type="button" value=" . " onclick="totalScreen.answer.value += '.'; change();" />
-                    <input type="button" value=" c " onclick="totalScreen.answer.value = ''; change();" />
-                    <br>
-                </div>
-            </form>
+                        <input type="button" value=" 7 " onclick="totalScreen.answer.value += '7'; change();" />
+                        <input type="button" value=" 8 " onclick="totalScreen.answer.value += '8'; change();" />
+                        <input type="button" value=" 9 " onclick="totalScreen.answer.value += '9'; change();" />
+                        <br>
 
-            <form id="amountScreen" style="display: none">
+                        <input type="button" value=" 0 " onclick="totalScreen.answer.value += '0'; change();" />
+                        <input type="button" value=" . " onclick="totalScreen.answer.value += '.'; change();" />
+                        <input type="button" value=" c " onclick="totalScreen.answer.value = ''; change();" />
+                        <br>
+                    </div>
+                </form>
 
-                <input type="text" onkeypress="return ((event.keyCode==8 ||event.keyCode==49 || event.keyCode==50 || event.keyCode==51|| event.keyCode==52|| event.keyCode==53|| event.keyCode==54|| event.keyCode==55|| event.keyCode==56|| event.keyCode==57|| event.keyCode==48|| event.keyCode === 46) && event.keyCode !== 16)" id="enterAmount" name="answer" value="" placeholder="Enter the amount paid:">
-                <input type="button" id="coun" onclick="count();" value="Count">
-                <br>
-                <div class="cashButtons">
-                    <input type="button" value=" 1 " onclick="amountScreen.answer.value += '1'; change();" />
-                    <input type="button" value=" 2 " onclick="amountScreen.answer.value += '2'; change();" />
-                    <input type="button" value=" 3 " onclick="amountScreen.answer.value += '3'; change();" />
-                    <br>
+                <form id="amountScreen" style="display: none">
 
-                    <input type="button" value=" 4 " onclick="amountScreen.answer.value += '4'; change();" />
-                    <input type="button" value=" 5 " onclick="amountScreen.answer.value += '5'; change();" />
-                    <input type="button" value=" 6 " onclick="amountScreen.answer.value += '6'; change();" />
+                    <input type="text" onkeypress="return ((event.keyCode==8 ||event.keyCode==49 || event.keyCode==50 || event.keyCode==51|| event.keyCode==52|| event.keyCode==53|| event.keyCode==54|| event.keyCode==55|| event.keyCode==56|| event.keyCode==57|| event.keyCode==48|| event.keyCode === 46) && event.keyCode !== 16)" id="enterAmount" name="answer" value="" placeholder="Enter the amount paid:">
+                    <input type="button" id="coun" onclick="count();" value="Count">
                     <br>
+                    <div class="cashButtons">
+                        <input type="button" value=" 1 " onclick="amountScreen.answer.value += '1'; change();" />
+                        <input type="button" value=" 2 " onclick="amountScreen.answer.value += '2'; change();" />
+                        <input type="button" value=" 3 " onclick="amountScreen.answer.value += '3'; change();" />
+                        <br>
 
-                    <input type="button" value=" 7 " onclick="amountScreen.answer.value += '7'; change();" />
-                    <input type="button" value=" 8 " onclick="amountScreen.answer.value += '8'; change();" />
-                    <input type="button" value=" 9 " onclick="amountScreen.answer.value += '9'; change();" />
-                    <br>
+                        <input type="button" value=" 4 " onclick="amountScreen.answer.value += '4'; change();" />
+                        <input type="button" value=" 5 " onclick="amountScreen.answer.value += '5'; change();" />
+                        <input type="button" value=" 6 " onclick="amountScreen.answer.value += '6'; change();" />
+                        <br>
 
-                    <input type="button" value=" 0 " onclick="amountScreen.answer.value += '0'; change();" />
-                    <input type="button" value=" . " onclick="amountScreen.answer.value += '.'; change();" />
-                    <input type="button" value=" c " onclick="amountScreen.answer.value = ''; change();" />
-                    <br>
-                </div>
-            </form>
+                        <input type="button" value=" 7 " onclick="amountScreen.answer.value += '7'; change();" />
+                        <input type="button" value=" 8 " onclick="amountScreen.answer.value += '8'; change();" />
+                        <input type="button" value=" 9 " onclick="amountScreen.answer.value += '9'; change();" />
+                        <br>
+
+                        <input type="button" value=" 0 " onclick="amountScreen.answer.value += '0'; change();" />
+                        <input type="button" value=" . " onclick="amountScreen.answer.value += '.'; change();" />
+                        <input type="button" value=" c " onclick="amountScreen.answer.value = ''; change();" />
+                        <br>
+                    </div>
+                </form>
+            </div>
+
         </div>
 
+        <div id="banknotes">
+
+            <img src="image/500.png">
+            <div id="banknote">
+                <h1 id="500" class="euro euroBanknote">500 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/200.png">
+            <div id="banknote" style="top:80px;">
+                <h1 id="200" class="euro euroBanknote">200 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/100.png">
+            <div id="banknote" style="top:155px;">
+                <h1 id="100" class="euro euroBanknote">100 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/50.png">
+            <div id="banknote" style="top:230px;">
+                <h1 id="50" class="euro euroBanknote">50 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/20.png">
+            <div id="banknote" style="top:305px;">
+                <h1 id="20" class="euro euroBanknote">20 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/10.png">
+            <div id="banknote" style="top:380px;">
+                <h1 id="10" class="euro euroBanknote">10 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/5.png">
+            <div id="banknote" style="top:455px;">
+                <h1 id="5" class="euro euroBanknote">5 &euro;: </h1>
+            </div>
+            <br>
+
+        </div>
+        <div id="coins">
+            <img src="image/2.png">
+            <div id="coin" style="top:0px;">
+                <h1 id="2" class="euro euroBanknote">2 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/1.png">
+            <div id="coin" style="top:75px;">
+                <h1 id="1" class="euro euroBanknote">1 &euro;: </h1>
+            </div>
+            <br>
+
+            <img src="image/05.png">
+            <div id="coin" style="top:150px;">
+                <h1 id="0.50" class="euro cent">0.50 &cent;: </h1>
+            </div>
+            <br>
+
+            <img src="image/02.png">
+            <div id="coin" style="top:225px;">
+                <h1 id="0.20" class="euro cent">0.20 &cent;: </h1>
+            </div>
+            <br>
+
+            <img src="image/01.png">
+            <div id="coin" style="top:300px;">
+                <h1 id="0.10" class="euro cent">0.10 &cent;: </h1>
+            </div>
+            <br>
+
+            <img src="image/005.png">
+            <div id="coin" style="top:375px;">
+                <h1 id="0.05" class="euro cent">0.05 &cent;: </h1>
+            </div>
+            <br>
+
+            <img src="image/002.png">
+            <div id="coin" style="top:450px;">
+                <h1 id="0.02" class="euro cent">0.02 &cent;: </h1>
+            </div>
+            <br>
+
+            <img src="image/001.png">
+            <div id="coin" style="top:525px;">
+                <h1 id="0.01" class="euro cent">0.01 &cent;: </h1>
+            </div>
+            <br>
+
+        </div>
     </div>
-
-    <div id="banknotes">
-
-        <img src="image/500.png">
-        <div id="banknote">
-            <h1 id="500" class="euro euroBanknote">500 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/200.png">
-        <div id="banknote" style="top:80px;">
-            <h1 id="200" class="euro euroBanknote">200 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/100.png">
-        <div id="banknote" style="top:155px;">
-            <h1 id="100" class="euro euroBanknote">100 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/50.png">
-        <div id="banknote" style="top:230px;">
-            <h1 id="50" class="euro euroBanknote">50 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/20.png">
-        <div id="banknote" style="top:305px;">
-            <h1 id="20" class="euro euroBanknote">20 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/10.png">
-        <div id="banknote" style="top:380px;">
-            <h1 id="10" class="euro euroBanknote">10 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/5.png">
-        <div id="banknote" style="top:455px;">
-            <h1 id="5" class="euro euroBanknote">5 &euro;: </h1>
-        </div>
-        <br>
-
-    </div>
-    <div id="coins">
-        <img src="image/2.png">
-        <div id="coin" style="top:0px;">
-            <h1 id="2" class="euro euroBanknote">2 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/1.png">
-        <div id="coin" style="top:75px;">
-            <h1 id="1" class="euro euroBanknote">1 &euro;: </h1>
-        </div>
-        <br>
-
-        <img src="image/05.png">
-        <div id="coin" style="top:150px;">
-            <h1 id="0.50" class="euro cent">0.50 &cent;: </h1>
-        </div>
-        <br>
-
-        <img src="image/02.png">
-        <div id="coin" style="top:225px;">
-            <h1 id="0.20" class="euro cent">0.20 &cent;: </h1>
-        </div>
-        <br>
-
-        <img src="image/01.png">
-        <div id="coin" style="top:300px;">
-            <h1 id="0.10" class="euro cent">0.10 &cent;: </h1>
-        </div>
-        <br>
-
-        <img src="image/005.png">
-        <div id="coin" style="top:375px;">
-            <h1 id="0.05" class="euro cent">0.05 &cent;: </h1>
-        </div>
-        <br>
-
-        <img src="image/002.png">
-        <div id="coin" style="top:450px;">
-            <h1 id="0.02" class="euro cent">0.02 &cent;: </h1>
-        </div>
-        <br>
-
-        <img src="image/001.png">
-        <div id="coin" style="top:525px;">
-            <h1 id="0.01" class="euro cent">0.01 &cent;: </h1>
-        </div>
-        <br>
-
-    </div>
-
-    <div class="footer">
+    <div id="footer" class="footer">
         <p>Copyright &copy; Arleta Stekla</p>
         <a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">Background vector created by freepik - www.freepik.com</a>
         <br>
