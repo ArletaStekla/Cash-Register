@@ -17,6 +17,7 @@ A program that calculates the change that the customer should receive.
 ## Things to do:
 
 - [ ] Add "alt" to the images
+- [ ] Change var to let
 - [x] Add pictures
 - [x] The ability to enter only numbers from the keyboard
 - [x] Add sounds
